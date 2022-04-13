@@ -63,19 +63,9 @@ namespace SharpGlWinForm.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap скала {
+        internal static System.Drawing.Bitmap Grass {
             get {
-                object obj = ResourceManager.GetObject("скала", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap скала1 {
-            get {
-                object obj = ResourceManager.GetObject("скала1", resourceCulture);
+                object obj = ResourceManager.GetObject("Grass", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

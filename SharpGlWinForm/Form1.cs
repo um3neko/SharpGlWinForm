@@ -18,38 +18,30 @@ namespace SharpGlWinForm
     public partial class Form1 : Form
     {
         ///
-        OpenGL openGL;
+        OpenGL op;
+        Map map;
         
-        Car car;
-        Queue<Car> cars;
-
-
         public Form1()
         {
             InitializeComponent();
-            openGL = this.openGLControl1.OpenGL;
-            car = new Car(openGL);
-            cars = new Queue<Car>();
+            op = this.openGLControl1.OpenGL;
+            map = new Map(op);
             
         }
 
         private void openGLControl1_GDIDraw(object sender, RenderEventArgs args)
         {
-            label1.Text = cars.Count.ToString();
-            openGL.Clear(OpenGL.GL_COLOR_BUFFER_BIT);
-            openGL.Clear(OpenGL.GL_DEPTH_BUFFER_BIT);
-            openGL.LoadIdentity();  
-            foreach (Car car in cars)
-            {
-                car.Draw();
-            }
+            map.StartMap();
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            cars.Enqueue(new Car(openGL));
+            
             
         }
+
+        
     }
 
      
